@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  jellyfin:
+    image: jellyfin-docker
+    volumes:
+      - ./config:/config
+      - ./media:/media
+    ports:
+      - target: 8096
+        published: 8096
+        mode: host
